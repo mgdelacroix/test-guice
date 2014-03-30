@@ -1,0 +1,15 @@
+apply plugin: 'groovy'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile 'org.codehaus.groovy:groovy-all:2.2.1'
+    compile 'com.google.inject:guice:3.0'
+}
+
+task run(type: JavaExec) {
+    main = 'test.TestGuice'
+    classpath = sourceSets.main.runtimeClasspath
+}
